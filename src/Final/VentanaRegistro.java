@@ -127,7 +127,7 @@ public class VentanaRegistro extends javax.swing.JFrame {
              PaginaAcceso pg=new PaginaAcceso(this,true);
             
              pg.setVisible(true);
-             
+             this.setVisible(false);
          }
          else{
              JOptionPane.showMessageDialog(this, "Datos Incorrectos");
@@ -165,6 +165,7 @@ public class VentanaRegistro extends javax.swing.JFrame {
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
                 new VentanaRegistro().setVisible(true);
+                
             }
         });
     }

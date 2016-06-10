@@ -36,7 +36,7 @@ Conectar con= new Conectar();
         labelCustom2 = new org.edisoncor.gui.label.LabelCustom();
         PassField = new org.edisoncor.gui.passwordField.PasswordFieldRectImage();
         t_usu = new org.edisoncor.gui.textField.TextField();
-        b_CrearUsuario = new org.edisoncor.gui.button.ButtonRect();
+        crearusu = new org.edisoncor.gui.button.ButtonAction();
 
         buttonIcon1.setText("buttonIcon1");
 
@@ -49,10 +49,10 @@ Conectar con= new Conectar();
 
         labelCustom2.setText("Contraseña");
 
-        b_CrearUsuario.setText("CREAR USUARIO");
-        b_CrearUsuario.addActionListener(new java.awt.event.ActionListener() {
+        crearusu.setText("CREAR USUARIO");
+        crearusu.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                b_CrearUsuarioActionPerformed(evt);
+                crearusuActionPerformed(evt);
             }
         });
 
@@ -60,7 +60,7 @@ Conectar con= new Conectar();
         panel1.setLayout(panel1Layout);
         panel1Layout.setHorizontalGroup(
             panel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(panel1Layout.createSequentialGroup()
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, panel1Layout.createSequentialGroup()
                 .addGap(36, 36, 36)
                 .addGroup(panel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                     .addComponent(labelCustom1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
@@ -71,8 +71,8 @@ Conectar con= new Conectar();
                     .addComponent(PassField, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 170, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(106, 106, 106))
             .addGroup(panel1Layout.createSequentialGroup()
-                .addGap(185, 185, 185)
-                .addComponent(b_CrearUsuario, javax.swing.GroupLayout.PREFERRED_SIZE, 143, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(207, 207, 207)
+                .addComponent(crearusu, javax.swing.GroupLayout.PREFERRED_SIZE, 143, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         panel1Layout.setVerticalGroup(
@@ -86,9 +86,9 @@ Conectar con= new Conectar();
                 .addGroup(panel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(labelCustom2, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(PassField, javax.swing.GroupLayout.DEFAULT_SIZE, 32, Short.MAX_VALUE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 108, Short.MAX_VALUE)
-                .addComponent(b_CrearUsuario, javax.swing.GroupLayout.PREFERRED_SIZE, 37, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(91, 91, 91))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 109, Short.MAX_VALUE)
+                .addComponent(crearusu, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(92, 92, 92))
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
@@ -105,7 +105,7 @@ Conectar con= new Conectar();
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void b_CrearUsuarioActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_b_CrearUsuarioActionPerformed
+    private void crearusuActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_crearusuActionPerformed
          String usuario=t_usu.getText();
        String password=PassField.getText();
        if((usuario.isEmpty())||(password.isEmpty()))
@@ -120,7 +120,7 @@ Conectar con= new Conectar();
         con.NuevaPersona(name,contra);
         this.setVisible(false);
         }
-    }//GEN-LAST:event_b_CrearUsuarioActionPerformed
+    }//GEN-LAST:event_crearusuActionPerformed
 
     /**
      * @param args the command line arguments
@@ -166,8 +166,8 @@ Conectar con= new Conectar();
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private org.edisoncor.gui.passwordField.PasswordFieldRectImage PassField;
-    private org.edisoncor.gui.button.ButtonRect b_CrearUsuario;
     private org.edisoncor.gui.button.ButtonIcon buttonIcon1;
+    private org.edisoncor.gui.button.ButtonAction crearusu;
     private org.edisoncor.gui.label.LabelCustom labelCustom1;
     private org.edisoncor.gui.label.LabelCustom labelCustom2;
     private org.edisoncor.gui.panel.Panel panel1;
